@@ -1,0 +1,103 @@
+.header-container {
+  background-color: #272727;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.website-logo {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.website-logo:hover {
+  transform: scale(1.05);
+}
+
+.small-device-headers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.large-device-header {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+  align-items: center;
+}
+
+.header-icons {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-icons:hover {
+  color: #4f46e5;
+}
+
+.logout-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.large-device-header li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.large-device-header li a:hover {
+  color: #4f46e5;
+}
+
+.large-device-header .logout-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.large-device-header .logout-button:hover {
+  background-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .small-device-headers {
+    display: none;
+  }
+  
+  .large-device-header {
+    display: flex;
+  }
+  
+  .website-logo {
+    width: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-container {
+    padding: 15px 50px;
+  }
+  
+  .website-logo {
+    width: 140px;
+  }
+}
